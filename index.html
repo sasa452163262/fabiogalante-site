@@ -298,12 +298,143 @@
   <p>Usamos o app <strong>MFit</strong>, que oferece treinos completos com vídeos explicativos, séries, repetições e registro de carga para acompanhamento detalhado.</p>
 </section>
 
-<section id="Como funciona">
-    <h2>Oque voce ira receber</h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consultoria Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #b8ff00;
+      color: #0a0a0a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #b8ff00;
+      margin-bottom: 30px;
+    }
+
+    /* Planos */
+    .plans-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .plan-card {
+      background-color: #121212;
+      border: 2px solid #b8ff00;
+      border-radius: 15px;
+      padding: 25px 20px;
+      width: 260px;
+      box-shadow: 0 0 6px #b8ff00;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .plan-card:hover {
+      box-shadow: 0 0 18px #b8ff00;
+    }
+
+    .plan-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .plan-price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #b8ff00;
+      margin-bottom: 10px;
+    }
+
+    .plan-desc {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #eee;
+    }
+
+    .btn-contact {
+      display: inline-block;
+      background-color: #b8ff00;
+      color: #0a0a0a;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background-color: #d7ff5f;
+    }
+
+    /* Como funciona */
+    .info-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .info-card {
+      background-color: #121212;
+      border: 2px solid #b8ff00;
+      border-radius: 15px;
+      padding: 25px 20px;
+      width: 260px;
+      text-align: left;
+      box-shadow: 0 0 6px #b8ff00;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+      box-shadow: 0 0 18px #b8ff00;
+    }
+
+    .info-card h3 {
+      font-size: 1.4rem;
+      color: #b8ff00;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Consultoria Online</h1>
+  </header>
+
+  <section id="planos">
+    <h2>Planos e Valores</h2>
     <div class="plans-container">
       <div class="plan-card">
-        <h3>Protocolo de treino</h3>
-        <div class="plan-price">Elaboramos um protocolo de treino baseado nas suas respostas que é entregue em até 72h.</div>
+        <h3>Plano Mensal</h3>
+        <div class="plan-price">R$ 120</div>
         <div class="plan-desc">Acesso ao treino atualizado a cada 60 dias e suporte diário durante 30 dias.</div>
         <a href="https://wa.me/5518997598196" target="_blank" rel="noopener noreferrer" class="btn-contact">Quero esse plano</a>
       </div>
@@ -321,6 +452,36 @@
       </div>
     </div>
   </section>
+
+  <section id="como-funciona">
+    <h2>Como funciona</h2>
+    <div class="info-cards">
+      <div class="info-card">
+        <h3>Etapa 1</h3>
+        <p>Você preenche o relatório inicial e envia fotos e peso atuais.</p>
+      </div>
+      <div class="info-card">
+        <h3>Etapa 2</h3>
+        <p>Com base nas informações, você recebe um treino completo a cada 60 dias.</p>
+      </div>
+      <div class="info-card">
+        <h3>Etapa 3</h3>
+        <p>Durante o plano, você tem suporte diário para tirar dúvidas.</p>
+      </div>
+      <div class="info-card">
+        <h3>Etapa 4</h3>
+        <p>Envia fotos e peso a cada 15 dias para feedback e ajustes no treino.</p>
+      </div>
+      <div class="info-card">
+        <h3>Etapa 5</h3>
+        <p>Todos os treinos são entregues pelo app <strong>MFit</strong>, com vídeos, séries, repetições e registro de cargas.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
   
   <section id="planos">
     <h2>Planos e Valores</h2>
