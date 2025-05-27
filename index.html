@@ -3,104 +3,301 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Consultoria Online - Treino Personalizado</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+  <title>Consultoria Online - Seu Nome</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Cabeçalho fixo */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+    header .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #007bff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+
+    /* Espaço para compensar header fixo */
+    main {
+      padding-top: 80px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Seção principal (hero) */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #007bff;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+    .btn-primary {
+      background: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #0056b3;
+    }
+
+    /* Seção Como Funciona */
+    section {
+      margin-bottom: 4rem;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 1rem;
+      border-left: 4px solid #007bff;
+      padding-left: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    ul li {
+      margin-bottom: 1rem;
+      padding-left: 1.2rem;
+      position: relative;
+      color: #444;
+      font-size: 1.1rem;
+    }
+    ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #007bff;
+      font-weight: 700;
+    }
+
+    /* Planos */
+    .planos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .plano {
+      flex: 1 1 250px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.05);
+      transition: box-shadow 0.3s ease;
+      background: #fafafa;
+    }
+    .plano:hover {
+      box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+    }
+    .plano h3 {
+      margin-bottom: 0.7rem;
+      color: #007bff;
+      font-size: 1.4rem;
+    }
+    .plano p.price {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    .plano p.desc {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    .plano a {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: background 0.3s ease;
+    }
+    .plano a:hover {
+      background: #0056b3;
+    }
+
+    /* Depoimentos */
+    .depoimentos p {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #007bff;
+      padding-left: 1rem;
+      color: #333;
+    }
+    .depoimentos p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Contato */
+    #contato p {
+      margin-bottom: 1rem;
+    }
+    #contato a {
+      display: inline-block;
+      margin-right: 1rem;
+      background: #007bff;
+      color: white;
+      padding: 0.7rem 1.3rem;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    #contato a:hover {
+      background: #0056b3;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-top: 1px solid #ddd;
+      color: #555;
+      font-size: 0.9rem;
+      background: #f9f9f9;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .planos {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-<body class="bg-[#1c1c1c] text-white">
+<body>
 
-  <header class="py-8 text-center">
-    <h1 class="text-5xl font-bold mb-2">Consultoria Online de Treinos</h1>
-    <p class="text-gray-300 max-w-xl mx-auto px-4">Treinos personalizados, atualizados a cada 60 dias, com suporte diário e feedback quinzenal.</p>
-  </header>
+<header>
+  <div class="logo">Seu Nome</div>
+  <nav>
+    <ul>
+      <li><a href="#como-funciona">Como Funciona</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Seção de Planos -->
-  <section id="planos" class="py-16 max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-12 text-center">Planos e Valores</h2>
-    <div class="grid md:grid-cols-3 gap-8 text-center">
+<main>
 
-      <div class="bg-[#272727] p-8 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-4">Plano Mensal</h3>
-        <p class="text-5xl font-bold mb-4">R$120</p>
-        <p class="mb-6">Treino atualizado a cada 60 dias, suporte diário e feedback quinzenal.</p>
-        <button class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold">Quero Entrar</button>
-      </div>
-
-      <div class="bg-[#272727] p-8 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-4">Plano Trimestral</h3>
-        <p class="text-5xl font-bold mb-4">R$340</p>
-        <p class="mb-6">Pagamento a cada 3 meses, com todos os benefícios do mensal.</p>
-        <button class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold">Quero Entrar</button>
-      </div>
-
-      <div class="bg-[#272727] p-8 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-4">Plano Semestral</h3>
-        <p class="text-5xl font-bold mb-4">R$700</p>
-        <p class="mb-6">Pagamento a cada 6 meses, com todos os benefícios do mensal.</p>
-        <button class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold">Quero Entrar</button>
-      </div>
-
-    </div>
+  <section class="hero">
+    <h1>Consultoria Online de Treino e Nutrição</h1>
+    <p>Transforme seu corpo com treinos personalizados, acompanhamento diário e suporte humano completo.</p>
+    <a href="#planos" class="btn-primary">Quero Começar Agora</a>
   </section>
 
-  <!-- Nova Seção: O que você vai receber -->
-  <section id="beneficios" class="bg-[#1c1c1c] text-white py-16">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-10">O que você vai receber ao entrar para o time</h2>
-      <div class="grid md:grid-cols-2 gap-8 text-left">
-        <div class="flex gap-4 items-start">
-          <span class="text-green-500 text-2xl">✔</span>
-          <div>
-            <h3 class="text-xl font-semibold">Treino individualizado no aplicativo MFit</h3>
-            <p class="text-sm text-gray-300">Você receberá um plano de treino completo, montado exclusivamente para você, com vídeos demonstrativos e orientações claras.</p>
-          </div>
-        </div>
+  <section id="como-funciona">
+    <h2>Como Funciona</h2>
+    <ul>
+      <li>Análise detalhada dos seus objetivos e histórico de treino</li>
+      <li>Plano de treino e dieta personalizados entregues em até 72 horas</li>
+      <li>Acompanhamento e suporte diário via WhatsApp</li>
+      <li>Atualização do treino a cada 60 dias</li>
+      <li>Conteúdo exclusivo em lives e área de membros</li>
+      <li>Apoio psicológico para fortalecer seu mental</li>
+    </ul>
+  </section>
 
-        <div class="flex gap-4 items-start">
-          <span class="text-green-500 text-2xl">✔</span>
-          <div>
-            <h3 class="text-xl font-semibold">Atualização de treino a cada 60 dias</h3>
-            <p class="text-sm text-gray-300">Evoluímos juntos! A cada 2 meses, seu treino será reavaliado e atualizado conforme seus resultados e objetivos.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 items-start">
-          <span class="text-green-500 text-2xl">✔</span>
-          <div>
-            <h3 class="text-xl font-semibold">Suporte online diário</h3>
-            <p class="text-sm text-gray-300">Tire dúvidas diretamente comigo todos os dias. Você não estará sozinho no processo.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 items-start">
-          <span class="text-green-500 text-2xl">✔</span>
-          <div>
-            <h3 class="text-xl font-semibold">Feedback quinzenal</h3>
-            <p class="text-sm text-gray-300">A cada 15 dias, envio de fotos e peso para análise, com devolutiva e ajustes se necessário.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 items-start">
-          <span class="text-green-500 text-2xl">✔</span>
-          <div>
-            <h3 class="text-xl font-semibold">Plano alimentar orientado</h3>
-            <p class="text-sm text-gray-300">Você recebe orientações alimentares que se encaixam na sua rotina, com sugestões práticas e eficazes para seus objetivos.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4 items-start">
-          <span class="text-green-500 text-2xl">✔</span>
-          <div>
-            <h3 class="text-xl font-semibold">Motivação e acompanhamento de verdade</h3>
-            <p class="text-sm text-gray-300">Além do treino, você terá acompanhamento humano, atenção e cobrança para te manter no caminho certo.</p>
-          </div>
-        </div>
+  <section id="planos">
+    <h2>Planos e Valores</h2>
+    <div class="planos">
+      <div class="plano">
+        <h3>Plano Mensal</h3>
+        <p class="price">R$ 120,00</p>
+        <p class="desc">Treino atualizado a cada 60 dias + suporte diário por 30 dias</p>
+        <a href="https://wa.me/5518997598196" target="_blank" rel="noopener">Quero esse plano</a>
+      </div>
+      <div class="plano">
+        <h3>Plano Trimestral</h3>
+        <p class="price">R$ 340,00</p>
+        <p class="desc">Treinos atualizados a cada 60 dias + suporte diário por 90 dias</p>
+        <a href="https://wa.me/5518997598196" target="_blank" rel="noopener">Quero esse plano</a>
+      </div>
+      <div class="plano">
+        <h3>Plano Semestral</h3>
+        <p class="price">R$ 700,00</p>
+        <p class="desc">Treinos atualizados a cada 60 dias + suporte diário por 180 dias</p>
+        <a href="https://wa.me/5518997598196" target="_blank" rel="noopener">Quero esse plano</a>
       </div>
     </div>
   </section>
 
-  <footer class="py-8 text-center text-gray-400 text-sm">
-    © 2025 Consultoria Online de Treinos. Todos os direitos reservados.
-  </footer>
+  <section id="depoimentos" class="depoimentos">
+    <h2>Depoimentos</h2>
+    <p>"O suporte é incrível! Sempre me ajudaram a ajustar meu treino e dieta." - Lucas A.</p>
+    <p>"Consegui resultados reais sem sair de casa. Recomendo demais!" - Mariana S.</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Quer começar sua transformação agora? Me chame no WhatsApp ou siga no Instagram:</p>
+    <a href="https://wa.me/5518997598196" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://www.instagram.com/seuusuario" target="_blank" rel="noopener">Instagram</a>
+    <a href="mailto:seuemail@gmail.com">Email</a>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Seu Nome - Consultoria Online</p>
+</footer>
 
 </body>
 </html>
