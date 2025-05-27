@@ -1,194 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consultoria online com treinos personalizados, suporte diário e resultados reais. Comece agora com Fabio Galante, personal trainer especializado.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>Fabio Galante - Consultoria Online</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            background-color: #111;
-            padding: 15px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .btn-contact {
-            background-color: #00ff00;
-            padding: 10px 20px;
-            border-radius: 10px;
-            color: #000;
-            text-decoration: none;
-        }
-
-        section {
-            padding: 50px;
-            text-align: center;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        input, textarea, button {
-            padding: 10px;
-            width: 80%;
-            max-width: 400px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: none;
-        }
-
-        button {
-            background-color: #00ff00;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .depoimento {
-            margin: 30px auto;
-            max-width: 500px;
-            background-color: #111;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .depoimento img {
-            width: 100px;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consultoria Online - Treino Personalizado</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
 </head>
+<body class="bg-[#1c1c1c] text-white">
 
-<body>
-    <nav>
-        <a href="#como-funciona">Como Funciona</a>
-        <a href="#planos">Planos</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato">Contato</a>
-        <a href="https://wa.me/5518997598196" class="btn-contact">Começar</a>
-    </nav>
+  <header class="py-8 text-center">
+    <h1 class="text-5xl font-bold mb-2">Consultoria Online de Treinos</h1>
+    <p class="text-gray-300 max-w-xl mx-auto px-4">Treinos personalizados, atualizados a cada 60 dias, com suporte diário e feedback quinzenal.</p>
+  </header>
 
-    <section id="hero">
-        <img src="sua-foto.jpg" alt="Foto de Fabio Galante" style="max-width: 250px; border-radius: 20px;">
-        <h1>Transforme seu corpo com treinos personalizados e suporte de verdade</h1>
-        <a href="https://wa.me/5518997598196" class="btn-contact">Começar agora</a>
-    </section>
+  <!-- Seção de Planos -->
+  <section id="planos" class="py-16 max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center">Planos e Valores</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
 
-    <section id="como-funciona">
-        <h2>Como Funciona</h2>
-        <p>Você preenche um relatório inicial, envia fotos e peso. Recebe seu treino personalizado pelo aplicativo MFit. A cada 60 dias, seu treino é atualizado conforme evolução.</p>
-        <p>Você terá suporte online diário, feedback quinzenal com envio de fotos e peso, e acompanhamento de verdade com foco em resultados reais.</p>
-    </section>
-
-    <section id="planos">
-        <h2>Planos</h2>
-        <p>Mensal: R$120<br>Trimestral: R$340<br>Semestral: R$700</p>
-    </section>
-<section id="beneficios" class="bg-[#1c1c1c] text-white py-16">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-10">O que você vai receber ao entrar para o time</h2>
-    <div class="grid md:grid-cols-2 gap-8 text-left">
-      <div class="flex gap-4 items-start">
-        <span class="text-green-500 text-2xl">✔</span>
-        <div>
-          <h3 class="text-xl font-semibold">Treino individualizado no aplicativo MFit</h3>
-          <p class="text-sm text-gray-300">Você receberá um plano de treino completo, montado exclusivamente para você, com vídeos demonstrativos e orientações claras.</p>
-        </div>
+      <div class="bg-[#272727] p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Plano Mensal</h3>
+        <p class="text-5xl font-bold mb-4">R$120</p>
+        <p class="mb-6">Treino atualizado a cada 60 dias, suporte diário e feedback quinzenal.</p>
+        <button class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold">Quero Entrar</button>
       </div>
 
-      <div class="flex gap-4 items-start">
-        <span class="text-green-500 text-2xl">✔</span>
-        <div>
-          <h3 class="text-xl font-semibold">Atualização de treino a cada 60 dias</h3>
-          <p class="text-sm text-gray-300">Evoluímos juntos! A cada 2 meses, seu treino será reavaliado e atualizado conforme seus resultados e objetivos.</p>
-        </div>
+      <div class="bg-[#272727] p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Plano Trimestral</h3>
+        <p class="text-5xl font-bold mb-4">R$340</p>
+        <p class="mb-6">Pagamento a cada 3 meses, com todos os benefícios do mensal.</p>
+        <button class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold">Quero Entrar</button>
       </div>
 
-      <div class="flex gap-4 items-start">
-        <span class="text-green-500 text-2xl">✔</span>
-        <div>
-          <h3 class="text-xl font-semibold">Suporte online diário</h3>
-          <p class="text-sm text-gray-300">Tire dúvidas diretamente comigo todos os dias. Você não estará sozinho no processo.</p>
-        </div>
+      <div class="bg-[#272727] p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Plano Semestral</h3>
+        <p class="text-5xl font-bold mb-4">R$700</p>
+        <p class="mb-6">Pagamento a cada 6 meses, com todos os benefícios do mensal.</p>
+        <button class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold">Quero Entrar</button>
       </div>
 
-      <div class="flex gap-4 items-start">
-        <span class="text-green-500 text-2xl">✔</span>
-        <div>
-          <h3 class="text-xl font-semibold">Feedback quinzenal</h3>
-          <p class="text-sm text-gray-300">A cada 15 dias, envio de fotos e peso para análise, com devolutiva e ajustes se necessário.</p>
-        </div>
-      </div>
+    </div>
+  </section>
 
-      <div class="flex gap-4 items-start">
-        <span class="text-green-500 text-2xl">✔</span>
-        <div>
-          <h3 class="text-xl font-semibold">Plano alimentar orientado</h3>
-          <p class="text-sm text-gray-300">Você recebe orientações alimentares que se encaixam na sua rotina, com sugestões práticas e eficazes para seus objetivos.</p>
+  <!-- Nova Seção: O que você vai receber -->
+  <section id="beneficios" class="bg-[#1c1c1c] text-white py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-10">O que você vai receber ao entrar para o time</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-left">
+        <div class="flex gap-4 items-start">
+          <span class="text-green-500 text-2xl">✔</span>
+          <div>
+            <h3 class="text-xl font-semibold">Treino individualizado no aplicativo MFit</h3>
+            <p class="text-sm text-gray-300">Você receberá um plano de treino completo, montado exclusivamente para você, com vídeos demonstrativos e orientações claras.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="flex gap-4 items-start">
-        <span class="text-green-500 text-2xl">✔</span>
-        <div>
-          <h3 class="text-xl font-semibold">Motivação e acompanhamento de verdade</h3>
-          <p class="text-sm text-gray-300">Além do treino, você terá acompanhamento humano, atenção e cobrança para te manter no caminho certo.</p>
+        <div class="flex gap-4 items-start">
+          <span class="text-green-500 text-2xl">✔</span>
+          <div>
+            <h3 class="text-xl font-semibold">Atualização de treino a cada 60 dias</h3>
+            <p class="text-sm text-gray-300">Evoluímos juntos! A cada 2 meses, seu treino será reavaliado e atualizado conforme seus resultados e objetivos.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <span class="text-green-500 text-2xl">✔</span>
+          <div>
+            <h3 class="text-xl font-semibold">Suporte online diário</h3>
+            <p class="text-sm text-gray-300">Tire dúvidas diretamente comigo todos os dias. Você não estará sozinho no processo.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <span class="text-green-500 text-2xl">✔</span>
+          <div>
+            <h3 class="text-xl font-semibold">Feedback quinzenal</h3>
+            <p class="text-sm text-gray-300">A cada 15 dias, envio de fotos e peso para análise, com devolutiva e ajustes se necessário.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <span class="text-green-500 text-2xl">✔</span>
+          <div>
+            <h3 class="text-xl font-semibold">Plano alimentar orientado</h3>
+            <p class="text-sm text-gray-300">Você recebe orientações alimentares que se encaixam na sua rotina, com sugestões práticas e eficazes para seus objetivos.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <span class="text-green-500 text-2xl">✔</span>
+          <div>
+            <h3 class="text-xl font-semibold">Motivação e acompanhamento de verdade</h3>
+            <p class="text-sm text-gray-300">Além do treino, você terá acompanhamento humano, atenção e cobrança para te manter no caminho certo.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-    <section id="depoimentos">
-        <h2>Resultados Reais</h2>
-        <div class="depoimento">
-            <img src="foto-aluno1.jpg" alt="Aluno antes e depois">
-            <p>“Consegui perder 12kg em 3 meses com o treino do Fabio. O suporte foi essencial!”</p>
-            <strong>– João, 29 anos</strong>
-        </div>
-        <div class="depoimento">
-            <img src="foto-aluna2.jpg" alt="Aluna antes e depois">
-            <p>“Nunca tive resultado sozinho. O plano foi simples de seguir e me senti acompanhada o tempo todo.”</p>
-            <strong>– Mariana, 35 anos</strong>
-        </div>
-    </section>
+  <footer class="py-8 text-center text-gray-400 text-sm">
+    © 2025 Consultoria Online de Treinos. Todos os direitos reservados.
+  </footer>
 
-    <section id="contato">
-        <h2>Fale comigo</h2>
-        <form action="https://formsubmit.co/seuemail@email.com" method="POST">
-            <input type="text" name="nome" placeholder="Seu nome" required><br>
-            <input type="email" name="email" placeholder="Seu e-mail" required><br>
-            <textarea name="mensagem" placeholder="Escreva sua dúvida ou objetivo..." rows="4" required></textarea><br>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
 </body>
-
 </html>
