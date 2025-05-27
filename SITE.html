@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Consultoria Online - Fabio Galante</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b0b0b;
+    color: #eee;
+    scroll-behavior: smooth;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    background: #111;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  }
+  header .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #b8ff00;
+    cursor: pointer;
+  }
+  nav a {
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #eee;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #b8ff00;
+  }
+  main {
+    padding-top: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* Hero */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+  }
+  .hero-text {
+    flex: 1 1 500px;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #b8ff00;
+    margin-bottom: 25px;
+  }
+  .hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    line-height: 1.5;
+  }
+  .btn-primary {
+    background: #b8ff00;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background: #98d900;
+  }
+  /* Image hero placeholder */
+  .hero-image {
+    flex: 1 1 400px;
+    min-height: 300px;
+    background: linear-gradient(135deg, #b8ff00 0%, #76a900 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 15px #b8ff00;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 80px;
+  }
+  section h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #b8ff00;
+    border-bottom: 3px solid #b8ff00;
+    padding-bottom: 6px;
+    margin-bottom: 30px;
+  }
+  section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  /* List styles */
+  ul {
+    max-width: 800px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #b8ff00;
+    font-weight: 700;
+  }
+
+  /* Plans */
+  .plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .plan-card {
+    background: #121212;
+    border: 2px solid #b8ff00;
+    border-radius: 15px;
+    padding: 30px 25px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 0 6px #b8ff00;
+    transition: box-shadow 0.3s ease;
+  }
+  .plan-card:hover {
+    box-shadow: 0 0 20px #b8ff00;
+  }
+  .plan-card h3 {
+    font-size: 1.8rem;
+    color: #b8ff00;
+    margin-bottom: 15px;
+  }
+  .plan-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .plan-desc {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .btn-contact {
+    background: transparent;
+    border: 2px solid #b8ff00;
+    color: #b8ff00;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .btn-contact:hover {
+    background: #b8ff00;
+    color: #000;
+  }
+  /* Testimonials */
+  .testimonials {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #cce98a;
+  }
+  .testimonial-item {
+    background: #111;
+    padding: 20px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px #b8ff00;
+  }
+  .testimonial-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  .testimonial-author {
+    font-weight: 700;
+    color: #b8ff00;
+    text-align: right;
+  }
+  /* Contact Section */
+  .contact-section {
+    text-align: center;
+  }
+  .contact-section h2 {
+    margin-bottom: 40px;
+  }
+  .contact-buttons a {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 14px 36px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: 2px solid #b8ff00;
+    color: #b8ff00;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .contact-buttons a:hover {
+    background: #b8ff00;
+    color: #000;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 25px 10px;
+    background: #111;
+    color: #b8ff00;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-top: 2px solid #b8ff00;
+  }
+  /* Responsive */
+  @media (max-width: 860px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-image {
+      min-height: 250px;
+      width: 100%;
+    }
+    .plans-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Fabio Galante</div>
+  <nav>
+    <a href="#como-funciona">Como Funciona</a>
+    <a href="#planos">Planos</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Consultoria Online de Personal Trainer</h1>
+      <p>Treinos personalizados, suporte diário e acompanhamento completo para você atingir seu melhor shape com saúde e segurança.</p>
+      <a href="https://wa.me/5518997598196" target="_blank" rel="noopener noreferrer" class="btn-primary">Quero começar pelo WhatsApp</a>
+    </div>
+    <div class="hero-image" aria-label="Imagem ilustrativa do serviço"></div>
+  </section>
+
+  <section id="como-funciona">
+    <h2>Como funciona</h2>
+    <p>Você responde ao relatório e envia fotos e peso atuais, através destes dados recebe novo treino a cada 60 dias.</p>
+    <p>Além disso, durante o período do seu plano, você tem todo suporte online:</p>
+    <ul>
+      <li>Tira dúvidas diariamente</li>
+      <li>Feedback quinzenal enviando fotos de corpo e peso a cada 15 dias</li>
+      <li>Ajustes no treino baseados nesses dados para melhores resultados</li>
+    </ul>
+    <p>Usamos o app <strong>MFit</strong>, que oferece treinos completos com vídeos explicativos, séries, repetições e registro de carga para acompanhamento detalhado.</p>
+  </section>
+
+  <section id="planos">
+    <h2>Planos e Valores</h2>
+    <div class="plans-container">
+      <div class="plan-card">
+        <h3>Plano Mensal</h3>
+        <div class="plan-price">R$ 120</div>
+        <div class="plan-desc">Acesso ao treino atualizado a cada 60 dias e suporte diário durante 30 dias.</div>
+        <a href="https://wa.me/5518997598196" target="_blank" rel="noopener noreferrer" class="btn-contact">Quero esse plano</a>
+      </div>
+      <div class="plan-card">
+        <h3>Plano Trimestral</h3>
+        <div class="plan-price">R$ 340</div>
+        <div class="plan-desc">Treinos atualizados a cada 60 dias e suporte diário durante 90 dias.</div>
+        <a href="https://wa.me/5518997598196" target="_blank" rel="noopener noreferrer" class="btn-contact">Quero esse plano</a>
+      </div>
+      <div class="plan-card">
+        <h3>Plano Semestral</h3>
+        <div class="plan-price">R$ 700</div>
+        <div class="plan-desc">Treinos atualizados a cada 60 dias e suporte diário durante 180 dias.</div>
+        <a href="https://wa.me/5518997598196" target="_blank" rel="noopener noreferrer" class="btn-contact">Quero esse plano</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="testimonials">
+      <div class="testimonial-item">
+        <p class="testimonial-text">“O suporte do Fabio é incrível! Ele sempre ajusta meu treino na hora certa e me ajuda a tirar dúvidas.”</p>
+        <p class="testimonial-author">— Lucas A.</p>
+      </div>
+      <div class="testimonial-item">
+        <p class="testimonial-text">“Com a consultoria online, consegui resultados reais sem sair de casa. Recomendo demais!”</p>
+        <p class="testimonial-author">— Mariana S.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact-section">
+    <h2>Contato</h2>
+    <p>Quer começar sua transformação agora? Fale comigo pelo WhatsApp ou Instagram:</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/5518997598196" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.instagram.com/fabiogf__/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="mailto:fabiogalante1033@gmail.com">Email</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Fabio Galante - Consultoria Online
+</footer>
+
+</body>
+</html>
